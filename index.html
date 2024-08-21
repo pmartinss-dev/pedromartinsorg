@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2285%22>💿</text></svg>"/>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedro Costa</title>
@@ -12,40 +15,49 @@
             <h1 class="fade-in">Pedro Costa</h1>
             <hr>
             <div class="text-block fade-in">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis nisi non metus accumsan, non tincidunt urna dictum. Donec eget sem varius, lacinia est non, accumsan sem.</p>
+                <p>Olá! Eu sou o Pedro, sou estudante universitário, e adora tecnologia!</p>
+                <p>Hello! My name is Pedro, I am an university student, and I love tech!</p>
             </div>
         </div>
         <div class="right">
             <div class="image-container fade-in">
-                <img src="" alt="Profile Picture" class="profile-picture">
+                <img src="https://preview.redd.it/does-anyone-other-than-me-know-where-this-cat-is-from-lol-v0-img24gu05lfb1.jpg?width=1080&crop=smart&auto=webp&s=c3f0a1639fc3a21e04864423c108302d5a36ff8b" alt="Profile Picture" class="profile-picture">
             </div>
             <div class="social-links fade-in">
-                <a href="#">Social Link 1</a>
-                <a href="#">Social Link 2</a>
-                <a href="#">Social Link 3</a>
-            </div>
-            <button class="contact-btn fade-in" id="contactBtn">Contact Me</button>
+                <a href="#" class="social-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>            
+            <button class="contact-btn fade-in" id="contactBtn">Envia-me um e-mail!</button>
         </div>
     </div>
 
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p class="email" id="email">example@example.com</p>
-            <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="email-container">
+                <p id="email" class="email">pedro@pedromartins.org</p>
+                <p class="info">Clica no e-mail para copiar!</p>
+            </div>
         </div>
     </div>
+    
+    <!-- Notification Box -->
+    <div id="notification" class="notification">
+        Email copiado com sucesso!
+    </div>
 
-    <footer class="fade-in">
-        <hr>
+    <footer>
         <p>Pedro Costa - 2024</p>
-        <ul>
-            <li>Example 1</li>
-            <li>Example 2</li>
-            <li>Example 3</li>
-            <li>Example 4</li>
+        <ul class="footer-links">
+            <li><img src="https://www.fcsh.unl.pt/content/themes/fcsh-theme/dist/images/logo_fcsh_desc_5fcb1f9a982023b3da05feb391ae538f.svg" alt=""></li>
+            <!-- Adicione mais itens conforme necessário -->
         </ul>
     </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
