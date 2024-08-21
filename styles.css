@@ -5,6 +5,7 @@ body {
     background-color: white;
     color: #222222;
     overflow-x: hidden;
+    zoom: 1.5; /* Zoom the entire page by 10% */
 }
 
 .container {
@@ -13,6 +14,7 @@ body {
     padding: 20px;
     animation: fadeIn 1s ease-out;
 }
+
 
 .left {
     width: 60%;
@@ -60,16 +62,31 @@ hr {
     gap: 10px;
 }
 
-.social-links a {
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-link {
     color: #222222;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaçamento entre o ícone e o texto */
     transition: color 0.3s ease;
 }
 
-.social-links a:hover {
+.social-link:hover {
     color: #555555;
 }
+
+.social-link i {
+    font-size: 20px; /* Tamanho dos ícones */
+}
+
 
 .contact-btn {
     background-color: #222222;
@@ -90,19 +107,40 @@ hr {
 footer {
     text-align: center;
     padding: 20px;
+    border-top: 2px solid #222222; /* Linha superior para separar o rodapé */
 }
 
-footer ul {
+footer p {
+    margin: 0;
+    font-size: 16px;
+    color: #222222;
+}
+
+.footer-links {
     list-style: none;
     padding: 0;
-    text-align: center;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre as imagens */
+    flex-wrap: wrap; /* Permite que as imagens se movam para a linha seguinte se não houver espaço suficiente */
 }
 
-footer ul li {
+.footer-links li {
     display: inline;
-    margin: 0 10px;
-    font-size: 12px;
 }
+
+.footer-links img {
+    width: 100px; /* Ajuste o tamanho das imagens conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px; /* Bordas arredondadas opcionais */
+    transition: opacity 0.3s ease;
+}
+
+.footer-links img:hover {
+    opacity: 0.7; /* Efeito de hover opcional */
+}
+
 
 .modal {
     display: none;
@@ -126,14 +164,21 @@ footer ul li {
     animation: fadeInModal 0.5s ease-out;
 }
 
-.modal-content .email {
+.email-container {
+    margin-bottom: 10px; /* Espaçamento abaixo do e-mail */
+}
+
+.email {
     font-size: 18px;
     color: #222222;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin: 0;
+    padding-bottom: 5px; /* Espaçamento entre o texto e a linha */
+    border-bottom: 2px solid #222222; /* Linha abaixo do e-mail */
+    display: inline-block; /* Faz com que a linha tenha o comprimento do texto */
 }
 
-.modal-content .info {
+.info {
     font-size: 14px;
     color: #555555;
 }
@@ -149,6 +194,31 @@ footer ul li {
 .close:hover,
 .close:focus {
     color: #000;
+}
+
+
+/* Notification Styles */
+.notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: #222222;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.notification.show {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
 @keyframes fadeIn {
