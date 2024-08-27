@@ -1,7 +1,7 @@
 document.addEventListener('mousemove', function(e) {
     var flashlight = document.querySelector('.flashlight');
-    flashlight.style.left = `${e.clientX}px`;  // Use clientX for relative to viewport
-    flashlight.style.top = `${e.clientY}px`;   // Use clientY for relative to viewport
+    flashlight.style.left = `${e.clientX}px`; 
+    flashlight.style.top = `${e.clientY}px`;   
 });
 
 function copyToClipboard(text) {
@@ -10,7 +10,6 @@ function copyToClipboard(text) {
     document.body.appendChild(tempTextarea);
 
     tempTextarea.select();
-    tempTextarea.setSelectionRange(0, 99999); 
     document.execCommand("copy");
 
     document.body.removeChild(tempTextarea);
