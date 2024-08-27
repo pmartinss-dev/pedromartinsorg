@@ -13,9 +13,9 @@
 .flashlight {
     pointer-events: none;
     position: fixed;
-    width: 1200px; /* Increased size */
-    height: 1200px; /* Increased size */
-    background: radial-gradient(circle, rgba(157, 211, 255, 0.678) 20%, transparent 70%); /* Lighter effect */
+    width: 1100px; /* Increased size */
+    height: 1100px; /* Increased size */
+    background: radial-gradient(circle, rgba(109, 160, 255, 0.61) 10%, transparent 75%); /* Lighter effect */
     border-radius: 50%;
     z-index: 10;
     transform: translate(-50%, -50%);
